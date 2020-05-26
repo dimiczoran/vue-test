@@ -27,8 +27,8 @@
                 @csrf
             </form>
         </header>
-        <main id="app">
-            @yield('content')
+        <main id="app">   
+            @yield('content')   
         </main>
     </div>
 
