@@ -1,5 +1,5 @@
 import Home from './components/Home'
-
+import Welcome from './components/Welcome'
 import NotFound from './components/NotFound'
 
 export default {
