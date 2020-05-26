@@ -2,8 +2,6 @@
 
 @section('content')
 <div class="uk-flex uk-flex-middle uk-flex-column uk-flex-center" uk-height-viewport>
-    <img class="uk-margin-bottom" src="/img/logo.png" alt="{{ config('app.name', 'Laravel') }}">
-
     <div class="uk-card uk-card-body uk-card-default uk-margin-large-bottom uk-width-large">
         <div class="uk-card-title uk-text-center">Welcome Back</div>
 

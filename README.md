@@ -1,2 +1,4 @@
 # vue-test
-Test laravel app with Vue.js
+Laravel test app with [Vue.js](https://vuejs.org/) and [UIkit](https://getuikit.com/)
+
+
