@@ -1,4 +1,5 @@
-import Home from './components/Home'
+import Contact from './components/Contact'
+import About from './components/About'
 import Welcome from './components/Welcome'
 import NotFound from './components/NotFound'
 
@@ -17,8 +18,13 @@ export default {
         },
 
         {
-            path: '/Home',
-            component: Home
+            path: '/about',
+            component: About
+        },
+
+        {
+            path: '/contact',
+            component: Contact
         },
 
     ]

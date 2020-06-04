@@ -9,10 +9,10 @@
 
 <script>
     export default {
-        
+
         props: ['width', 'title', 'text'],
         data() {
-
+            return {};
         },
         methods: {
             widthClass() {

@@ -27,8 +27,16 @@
                 @csrf
             </form>
         </header>
-        <main id="app">   
-            @yield('content')   
+        <main id="app">
+            @auth
+                <ul class="uk-navbar-nav">
+                    <li><router-link to="/" exact>Home</router-link></li>
+                    <li><router-link to="/about">About</router-link></li>
+                    <li><router-link to="/contact">Contact</router-link></li>
+                </ul>
+            @endauth
+
+            @yield('content')
         </main>
     </div>
 
