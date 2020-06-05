@@ -167,10 +167,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      isLoading: true,
+      isActive: true
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+    var _this = this;
+
+    setTimeout(function () {
+      _this.isLoading = false;
+      UIkit.update(document.body, 'update');
+    }, 1000);
+  },
+  method: function method() {}
 });
 
 /***/ }),
@@ -817,38 +835,63 @@ var render = function() {
   return _c("div", [
     _c("h1", [_vm._v("Welcome")]),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "uk-grid-match", attrs: { "uk-grid": "" } },
-      [
-        _c("component-card", {
-          attrs: { width: "1-2", title: "Card 1", text: "Lorem ipsum" }
-        }),
-        _vm._v(" "),
-        _c("component-card", {
-          attrs: { width: "1-2", title: "Card 1", text: "Eius magnam sequi" }
-        }),
-        _vm._v(" "),
-        _c("component-card", {
-          attrs: {
-            width: "1-1",
-            title: "Card 1",
-            text: "Onsectetur adipisicing elit"
-          }
-        })
-      ],
-      1
-    ),
+    _vm.isLoading
+      ? _c(
+          "div",
+          {
+            staticClass: "uk-flex uk-flex-center uk-flex-middle uk-height-large"
+          },
+          [_c("span", { attrs: { "uk-spinner": "ratio: 4.5" } })]
+        )
+      : _vm._e(),
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "uk-margin" },
+      {
+        class: {
+          "uk-hidden": _vm.isLoading,
+          "uk-animation-fade": !_vm.isLoading
+        }
+      },
       [
-        _c("component-button", { attrs: { label: "Click me!" } }),
+        _c(
+          "div",
+          { staticClass: "uk-grid-match", attrs: { "uk-grid": "" } },
+          [
+            _c("component-card", {
+              attrs: { width: "1-2", title: "Card 1", text: "Lorem ipsum" }
+            }),
+            _vm._v(" "),
+            _c("component-card", {
+              attrs: {
+                width: "1-2",
+                title: "Card 1",
+                text: "Eius magnam sequi"
+              }
+            }),
+            _vm._v(" "),
+            _c("component-card", {
+              attrs: {
+                width: "1-1",
+                title: "Card 1",
+                text: "Onsectetur adipisicing elit"
+              }
+            })
+          ],
+          1
+        ),
         _vm._v(" "),
-        _c("component-button", { attrs: { label: "Click me!" } })
-      ],
-      1
+        _c(
+          "div",
+          { staticClass: "uk-margin" },
+          [
+            _c("component-button", { attrs: { label: "Click me!" } }),
+            _vm._v(" "),
+            _c("component-button", { attrs: { label: "Click me!" } })
+          ],
+          1
+        )
+      ]
     )
   ])
 }
